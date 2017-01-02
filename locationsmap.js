@@ -1,10 +1,3 @@
-jQuery(function($) {
-    // Asynchronously Load the map API 
-    var script = document.createElement('script');
-    script.src = "//maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
-    document.body.appendChild(script);
-}); 
-
 function initialize() {
       var regions = [],
           e = [],
@@ -15,8 +8,10 @@ function initialize() {
       o[8] = new google.maps.LatLng(35.607980, -105.214833), o[9] = new google.maps.LatLng(36.007817, -106.038713);
 
       var a = {
-              zoom: 7,
+              minZoom: 7,
+	      maxZoom: 8,
               center: o[1],
+	      streetViewControl: false,
               mapTypeId: google.maps.MapTypeId.ROADMAP
           },
           n = new google.maps.Map(document.getElementById("map"), a);
