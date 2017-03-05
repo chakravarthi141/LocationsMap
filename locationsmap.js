@@ -1,4 +1,4 @@
-window.onload = function() {
+function initialize() {
       var regions = [],
           ProgrqamLocations = [],
           LocationCoordinates = [];
