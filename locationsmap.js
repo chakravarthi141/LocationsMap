@@ -20,31 +20,31 @@ function initialize() {
         new google.maps.Point(0,0),
         new google.maps.Point(10, 34));
 	
-	    regions[1] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=II|FFFF00",
+	    regions[1] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=II|FF0000",
         new google.maps.Size(21, 34),
         new google.maps.Point(0,0),
         new google.maps.Point(10, 34));
-		regions[2] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=III|04B404",
+		regions[2] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=III|FF0000",
         new google.maps.Size(21, 34),
         new google.maps.Point(0,0),
         new google.maps.Point(10, 34));
-		regions[3] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=IV|0040FF",
+		regions[3] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=IV|FF0000",
         new google.maps.Size(21, 34),
         new google.maps.Point(0,0),
         new google.maps.Point(10, 34));
-		regions[4] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=V|A9F5A9",
+		regions[4] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=V|FF0000",
         new google.maps.Size(21, 34),
         new google.maps.Point(0,0),
         new google.maps.Point(10, 34));
-		regions[5] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=VI|00FFFF",
+		regions[5] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=VI|FF0000",
         new google.maps.Size(21, 34),
         new google.maps.Point(0,0),
         new google.maps.Point(10, 34));
-		regions[6] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=VII|BF00FF",
+		regions[6] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=VII|FF0000",
         new google.maps.Size(21, 34),
         new google.maps.Point(0,0),
         new google.maps.Point(10, 34));
-		regions[7] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=VIII|FF8000",
+		regions[7] = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=VIII|FF0000",
         new google.maps.Size(21, 34),
         new google.maps.Point(0,0),
         new google.maps.Point(10, 34));
@@ -54,28 +54,28 @@ function initialize() {
                 map: n,
 				url: "albuquerque-program/",
 				title: "Albuquerque",
-                icon: regions[0],
+                icon: regions[3],
             });
 		ProgrqamLocations[1] = new google.maps.Marker({
                 position: LocationCoordinates[1], 
                 map: n,
 				url: "santa-fe-prototype/",
 				title: "SantaFe",
-                icon: regions[0],
+                icon: regions[1],
             });
 		ProgrqamLocations[2] = new google.maps.Marker({
                 position: LocationCoordinates[2], 
                 map: n,
 				url: "taos-program/",
 				title: "Taos",
-                icon: regions[0],
+                icon: regions[1],
             });
 		ProgrqamLocations[3] = new google.maps.Marker({
                 position: LocationCoordinates[3], 
                 map: n,
 				url: "alamogordo-program/",
 				title: "Alamogordo",
-                icon: regions[0],
+                icon: regions[6],
             });
 		ProgrqamLocations[4] = new google.maps.Marker({
                 position: LocationCoordinates[4], 
@@ -89,35 +89,35 @@ function initialize() {
                 map: n,
 				url: "chama-program/",
 				title: "Chama",
-                icon: regions[0],
+                icon: regions[1],
             });
 		ProgrqamLocations[6] = new google.maps.Marker({
                 position: LocationCoordinates[6], 
                 map: n,
 				url: "tierraamarilla-program/",
 				title: "Tierra Amarilla",
-                icon: regions[0],
+                icon: regions[1],
             });
 		ProgrqamLocations[7] = new google.maps.Marker({
                 position: LocationCoordinates[7], 
                 map: n,
 				url: "socorro-program/",
 				title: "Socorro",
-                icon: regions[0],
+                icon: regions[3],
             });
 		ProgrqamLocations[8] = new google.maps.Marker({
                 position: LocationCoordinates[8], 
                 map: n,
 				url: "LasVegas-program/",
 				title: "Las Vegas",
-                icon: regions[0],
+                icon: regions[2],
             });
 		ProgrqamLocations[9] = new google.maps.Marker({
                 position: LocationCoordinates[9], 
                 map: n,
 				url: "Espanola-program/",
 				title: "Española ",
-                icon: regions[0],
+                icon: regions[1],
             });
 
       for (i = 0; i < ProgrqamLocations.length; i++) {
