@@ -1,17 +1,17 @@
 function initialize() {
       var regions = [],
-          e = [],
-          o = [];
-
-      o[0] = new google.maps.LatLng(35.08533, -106.60555), o[1] = new google.maps.LatLng(35.68697, -105.93779), o[2] = new google.maps.LatLng(36.40724, -105.57306), o[3] = new google.maps.LatLng(32.9004, -105.9605);
-      o[4] = new google.maps.LatLng(36.749985, -108.205037), o[5] = new google.maps.LatLng(36.897109, -106.586241), o[6] = new google.maps.LatLng(36.698969, -106.551910), o[7] = new google.maps.LatLng(34.042221, -106.906592);
-      o[8] = new google.maps.LatLng(35.607980, -105.214833), o[9] = new google.maps.LatLng(36.007817, -106.038713);
+          ProgrqamLocations = [],
+          LocationCoordinates = [];
+		  var minZoomLevel = 7;
+		NMcenter = new google.maps.LatLng(34.701595, -105.835424); //Location of Torrance County, New Mexico
+		
+      LocationCoordinates[0] = new google.maps.LatLng(35.08533, -106.60555), LocationCoordinates[1] = new google.maps.LatLng(35.68697, -105.93779), LocationCoordinates[2] = new google.maps.LatLng(36.40724, -105.57306), LocationCoordinates[3] = new google.maps.LatLng(32.9004, -105.9605);
+      LocationCoordinates[4] = new google.maps.LatLng(36.749985, -108.205037), LocationCoordinates[5] = new google.maps.LatLng(36.897109, -106.586241), LocationCoordinates[6] = new google.maps.LatLng(36.698969, -106.551910), LocationCoordinates[7] = new google.maps.LatLng(34.042221, -106.906592);
+      LocationCoordinates[8] = new google.maps.LatLng(35.607980, -105.214833), LocationCoordinates[9] = new google.maps.LatLng(36.007817, -106.038713);
 
       var a = {
-              minZoom: 7,
-	      maxZoom: 8,
-              center: o[1],
-	      streetViewControl: false,
+              zoom: minZoomLevel,
+              center: NMcenter,
               mapTypeId: google.maps.MapTypeId.ROADMAP
           },
           n = new google.maps.Map(document.getElementById("map"), a);
@@ -49,81 +49,111 @@ function initialize() {
         new google.maps.Point(0,0),
         new google.maps.Point(10, 34));
 
-		e[0] = new google.maps.Marker({
-                position: o[0], 
+		ProgrqamLocations[0] = new google.maps.Marker({
+                position: LocationCoordinates[0], 
                 map: n,
 				url: "albuquerque-program/",
 				title: "Albuquerque",
                 icon: regions[3],
             });
-		e[1] = new google.maps.Marker({
-                position: o[1], 
+		ProgrqamLocations[1] = new google.maps.Marker({
+                position: LocationCoordinates[1], 
                 map: n,
 				url: "santa-fe-prototype/",
 				title: "SantaFe",
                 icon: regions[1],
             });
-		e[2] = new google.maps.Marker({
-                position: o[2], 
+		ProgrqamLocations[2] = new google.maps.Marker({
+                position: LocationCoordinates[2], 
                 map: n,
 				url: "taos-program/",
 				title: "Taos",
                 icon: regions[1],
             });
-		e[3] = new google.maps.Marker({
-                position: o[3], 
+		ProgrqamLocations[3] = new google.maps.Marker({
+                position: LocationCoordinates[3], 
                 map: n,
 				url: "alamogordo-program/",
 				title: "Alamogordo",
                 icon: regions[6],
             });
-		e[4] = new google.maps.Marker({
-                position: o[4], 
+		ProgrqamLocations[4] = new google.maps.Marker({
+                position: LocationCoordinates[4], 
                 map: n,
 				url: "farmington-program/",
 				title: "Farmington",
                 icon: regions[0],
             });
-		e[5] = new google.maps.Marker({
-                position: o[5], 
+		ProgrqamLocations[5] = new google.maps.Marker({
+                position: LocationCoordinates[5], 
                 map: n,
 				url: "chama-program/",
 				title: "Chama",
                 icon: regions[1],
             });
-		e[6] = new google.maps.Marker({
-                position: o[6], 
+		ProgrqamLocations[6] = new google.maps.Marker({
+                position: LocationCoordinates[6], 
                 map: n,
 				url: "tierraamarilla-program/",
 				title: "Tierra Amarilla",
                 icon: regions[1],
             });
-		e[7] = new google.maps.Marker({
-                position: o[7], 
+		ProgrqamLocations[7] = new google.maps.Marker({
+                position: LocationCoordinates[7], 
                 map: n,
 				url: "socorro-program/",
 				title: "Socorro",
                 icon: regions[3],
             });
-		e[8] = new google.maps.Marker({
-                position: o[8], 
+		ProgrqamLocations[8] = new google.maps.Marker({
+                position: LocationCoordinates[8], 
                 map: n,
 				url: "LasVegas-program/",
 				title: "Las Vegas",
                 icon: regions[2],
             });
-		e[9] = new google.maps.Marker({
-                position: o[9], 
+		ProgrqamLocations[9] = new google.maps.Marker({
+                position: LocationCoordinates[9], 
                 map: n,
 				url: "Espanola-program/",
 				title: "Española ",
                 icon: regions[1],
             });
 
-
-      for (i = 0; i < e.length; i++) {
-          google.maps.event.addListener(e[i], "click", function() {
+      for (i = 0; i < ProgrqamLocations.length; i++) {
+          google.maps.event.addListener(ProgrqamLocations[i], "click", function() {
               window.location.href = this.url
           })
       }
+	  
+	  		   // Bounds for New Mexico
+		var strictBounds = new google.maps.LatLngBounds(
+		new google.maps.LatLng(31.569400, -108.788600), 
+		new google.maps.LatLng(37.000123, -103.002199)
+		);
+   // Listen for the dragend event
+   google.maps.event.addListener(n, 'drag', function() {
+     if (strictBounds.contains(n.getCenter())) return;
+
+     // We're out of bounds - Move the map back within the bounds
+
+     var c = n.getCenter(),
+         x = c.lng(),
+         y = c.lat(),
+         maxX = strictBounds.getNorthEast().lng(),
+         maxY = strictBounds.getNorthEast().lat(),
+         minX = strictBounds.getSouthWest().lng(),
+         minY = strictBounds.getSouthWest().lat();
+
+     if (x < minX) x = minX;
+     if (x > maxX) x = maxX;
+     if (y < minY) y = minY;
+     if (y > maxY) y = maxY;
+
+     n.setCenter(NMcenter);
+   });
+      // Limit the zoom level
+   google.maps.event.addListener(n, 'zoom_changed', function() {
+     if (n.getZoom() < minZoomLevel) n.setZoom(minZoomLevel);
+   });
   };
