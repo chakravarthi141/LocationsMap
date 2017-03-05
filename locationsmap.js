@@ -54,28 +54,28 @@ function initialize() {
                 map: n,
 				url: "albuquerque-program/",
 				title: "Albuquerque",
-                icon: regions[3],
+                icon: regions[0],
             });
 		ProgrqamLocations[1] = new google.maps.Marker({
                 position: LocationCoordinates[1], 
                 map: n,
 				url: "santa-fe-prototype/",
 				title: "SantaFe",
-                icon: regions[1],
+                icon: regions[0],
             });
 		ProgrqamLocations[2] = new google.maps.Marker({
                 position: LocationCoordinates[2], 
                 map: n,
 				url: "taos-program/",
 				title: "Taos",
-                icon: regions[1],
+                icon: regions[0],
             });
 		ProgrqamLocations[3] = new google.maps.Marker({
                 position: LocationCoordinates[3], 
                 map: n,
 				url: "alamogordo-program/",
 				title: "Alamogordo",
-                icon: regions[6],
+                icon: regions[0],
             });
 		ProgrqamLocations[4] = new google.maps.Marker({
                 position: LocationCoordinates[4], 
@@ -89,35 +89,35 @@ function initialize() {
                 map: n,
 				url: "chama-program/",
 				title: "Chama",
-                icon: regions[1],
+                icon: regions[0],
             });
 		ProgrqamLocations[6] = new google.maps.Marker({
                 position: LocationCoordinates[6], 
                 map: n,
 				url: "tierraamarilla-program/",
 				title: "Tierra Amarilla",
-                icon: regions[1],
+                icon: regions[0],
             });
 		ProgrqamLocations[7] = new google.maps.Marker({
                 position: LocationCoordinates[7], 
                 map: n,
 				url: "socorro-program/",
 				title: "Socorro",
-                icon: regions[3],
+                icon: regions[0],
             });
 		ProgrqamLocations[8] = new google.maps.Marker({
                 position: LocationCoordinates[8], 
                 map: n,
 				url: "LasVegas-program/",
 				title: "Las Vegas",
-                icon: regions[2],
+                icon: regions[0],
             });
 		ProgrqamLocations[9] = new google.maps.Marker({
                 position: LocationCoordinates[9], 
                 map: n,
 				url: "Espanola-program/",
 				title: "Española ",
-                icon: regions[1],
+                icon: regions[0],
             });
 
       for (i = 0; i < ProgrqamLocations.length; i++) {
